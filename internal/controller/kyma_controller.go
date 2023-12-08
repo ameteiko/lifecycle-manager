@@ -96,7 +96,7 @@ func (r *KymaReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.
 	logger := logf.FromContext(ctx)
 	logger.V(log.DebugLevel).Info("reconciling")
 
-	print(img.ConfigLayer)
+	_ = img.ConfigLayer
 
 	ctx = adapter.ContextWithRecorder(ctx, r.EventRecorder)
 
